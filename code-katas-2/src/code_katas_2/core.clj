@@ -5,13 +5,17 @@
   "Escribir una funcion que acepte una funcion parcial con cantidad de argumentos desconocida,
    retornar una funcion equivalente de n argumentos"
   [f]
+  
   (partial
     (fn [f & args]
+      "lo que se hace con el let es guardar en res, f y el primer argumento de f"
       (let[res(f(first args))]
+        "if preguntando si res es una funcion o no"
         (if (fn? res)
-        (recur res (rest args))
-        res)))
-  f))
+          "hasta este punto fue lo visto en clase"
+          "Ahora lo que se hace es llamar recursivamente a res 
+          y a los argumentos de f que quedan (rest args)"
+        (recur res (rest args))res))) f))
   
 
 (defn search
