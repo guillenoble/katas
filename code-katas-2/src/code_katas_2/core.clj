@@ -5,14 +5,26 @@
   "Escribir una funcion que acepte una funcion parcial con cantidad de argumentos desconocida,
    retornar una funcion equivalente de n argumentos"
   [f]
-  "tfhuigutrfhuihkityftg")
-
+  (partial
+    (fn [f & args]
+      (let[res(f(first args))]
+        (if (fn? res)
+        (recur res (rest args))
+        res)))
+  f))
+  
 
 (defn search
   "Dado un numero cualquiera de secuencias, cada una ya ordenada de menor a mayor, encontrar el numero
    mas chico que aparezca en todas las secuencias, las secuencias pueden ser infinitas."
   [& seqs]
-  )
+  
+)
+  
+  
+
+
+  
 
 
 (defn intercalar
@@ -20,7 +32,11 @@
    retorne una nueva coleccion donde el valor es insertado intercalado cada dos argumentos
    que cumplan el predicado"
   [predicado valor secuencia]
-  )
+
+  
+)
+
+ 
 
 
 (defn tartamudeo
@@ -30,4 +46,6 @@
    La funcion debe aceptar una secuencia inicial de numeros, y devolver una secuencia infinita de compresiones, donde
    cada nuevo elemento es el elemento anterior comprimido."
   [secuencia]
+  
   )
+  
