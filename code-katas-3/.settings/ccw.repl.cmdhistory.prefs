@@ -1,0 +1,2 @@
+cmdhistory=["(l/run* [q] (sumaro q 1 2))" "(run* [q] (sumaro q 1 2))" "(run* [q] (sumaro 1 q 5))" "(run-test)" "(sumarlisto [1 2 3])" "(run* [q] (sumarlisto q [1 2]))" "run* [q] (sumarlisto fd/q [1 2])" "(run* [q] (sumarlisto q [1 2]))" "(run* [q] (sumarlisto 2 [1 2]))" "(run* [q] (sumarlisto q [1 2]))" "(run* [q] (sumarlisto 7 [1 2 q]))" "(run-tests)"]
+eclipse.preferences.version=1

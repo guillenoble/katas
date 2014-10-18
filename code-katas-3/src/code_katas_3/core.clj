@@ -9,6 +9,7 @@
 (defn sumaro
   "Escriba una relacion sumar donde a mas b sea igual a c"
   [a b c]
+  (fd/+ a b c) ;a + b = c
   )
 
 ;;2)
@@ -16,6 +17,7 @@
 (defn restaro
   "Escriba una relacion restar donde a menos b sea igual a c"
   [a b c]
+  (fd/- a b c);a - b = c
   )
 
 ;;3)
@@ -24,8 +26,18 @@
   "Escriba una relacion sumarlisto donde la suma de todos los
    elementos de la lista lst sea igual al resultado en res"
   [res lst]
-  )
+  (conde 
+      ((emptyo lst) (== 0 res)) ;caso base
+      ((fresh [primero resLista1 resLista2] ;nuevas variables
+      (resto lst resLista1) ;todos los elementos de la lista menos el primero
+      (firsto lst primero);tomo el primer elemento de la lista
+      (fd/- res primero resLista2);res - primero = resLista2
+      (sumarlisto resLista2 resLista1)))));parte recursiva 
+  
 
+  
+  
+ 
 ;;4)
 
 (defn ultimoo
@@ -45,6 +57,7 @@
   Considere usar appendo
   http://clojure.github.io/core.logic/#clojure.core.logic/appendo"
   [l tmul]
+  
   )
 
 
